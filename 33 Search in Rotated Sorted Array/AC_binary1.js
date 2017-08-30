@@ -11,7 +11,7 @@ var search = function(nums, target) {
 	let lo = 0, hi = n - 1;
 
 	while (lo < hi) {
-		let mid = Math.floor((lo + hi) / 2)
+		let mid = Math.floor((lo + hi) / 2);
 		if (nums[mid] > nums[hi]) {
 			lo = mid + 1
 		} else {
@@ -23,18 +23,18 @@ var search = function(nums, target) {
 	lo = 0;
 	hi = n - 1;
 	if (target === nums[0])
-		return 0
+		return 0;
 	else if (target < nums[0])
-		lo = rotated
+		lo = rotated;
 	else 
 		hi = (rotated + n - 1) % n;
 
 	while (lo <= hi) {
-		let mid = Math.floor((lo + hi) / 2)
+		let mid = Math.floor((lo + hi) / 2);
 		if (nums[mid] === target)
-			return mid
+			return mid;
 		else if (nums[mid] > target) 
-			hi = mid - 1
+			hi = mid - 1;
 		else 
 			lo = mid + 1
 	}

@@ -33,6 +33,6 @@ function neighbors(board, m, n, i, j) {
     		ret += board[x][y]
     	}
     }
-    ret -= board[i][j]
+    ret -= board[i][j];
     return ret
 }
